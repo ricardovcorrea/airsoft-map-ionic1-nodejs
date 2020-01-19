@@ -1,0 +1,33 @@
+<ion-view view-title="Game List">
+    <ion-header-bar class="bar-dark bar bar-header" align-title="center">
+       <button class="button button-icon icon ion-arrow-left-c" ng-click="goToSelectIp()"></button>
+  <h1 class="title">JOGOS</h1>
+</ion-header-bar>
+    <ion-content class="bg-gradient-black has-header">
+        <div class="app-body col-md-12" ng-class="viewModel.isLoading ? 'whirl' : ''">
+           <div class="list card" ng-repeat="game in viewModel.gamesList">
+
+  <div class="item item-avatar" style="position: relative;">
+    <img src="img/falcon_logo.png">
+    <h2>{{game.name}}</h2>
+    <p>{{game.dateTime}}</p>
+    <button class="button button-small enter-game-button button-balanced" ng-disabled="!game.available" ng-click="enterGame(game)">
+      ENTRAR
+    </button>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" ng-src="{{game.image}}">
+    <p>
+      {{game.description}}
+    </p>
+    <p>
+      <a href="#" class="subdued">10 Pessoas jogando</a>
+    </p>
+  </div>
+
+</div>
+
+        </div>
+    </ion-content>
+</ion-view>

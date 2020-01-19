@@ -1,0 +1,18 @@
+{
+  "name": "airsoft-map-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Ricardo Vaz Correa - ricardovcorrea@live.com",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.4",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.7",
+    "q": "^1.4.1"
+  }
+}

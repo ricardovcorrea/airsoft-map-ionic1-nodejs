@@ -1,0 +1,20 @@
+<ion-view view-title="Enter Game">
+    <ion-header-bar class="bar-dark bar bar-header" align-title="center">
+       <button class="button button-icon icon ion-arrow-left-c" ng-click="goToGames()"></button>
+  <h1 class="title">ENTRAR EM JOGO </h1>
+</ion-header-bar>
+    <ion-content class="bg-gradient-black has-header">
+        <div class="app-body col-md-12" ng-class="viewModel.isLoading ? 'whirl' : ''">
+            <br>
+           <div class="form-group">
+               <label class="font-upper-white">Nome</label>
+               <input class="form-control enterGame-name" type="text" ng-model="viewModel.playerName"></div>
+           <div class="form-group">
+               <label class="font-upper-white">Time</label>
+               <select class="form-control" ng-model="viewModel.selectedTeamId" ng-options="team as team.name for team in viewModel.gameTeams track by team._id"></select>
+            <br>
+            <div class="form-group"><button type="button" class="btn btn-success form-control" ng-click="">ENTRAR</button></div>
+
+        </div>
+    </ion-content>
+</ion-view>
